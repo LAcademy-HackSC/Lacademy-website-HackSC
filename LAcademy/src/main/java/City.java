@@ -1,7 +1,4 @@
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class City implements Map<String, Object> {
     public String city;
@@ -9,13 +6,15 @@ public class City implements Map<String, Object> {
     public String country;
     public boolean b;
     public long l;
+    public List<String> asList;
 
-    public City(String city, String state, String country, boolean b, long l) {
+    public City(String city, String state, String country, boolean b, long l, List<String> asList) {
         this.city = city;
         this.state = state;
         this.country = country;
         this.b = b;
         this.l = l;
+        this.asList = asList;
     }
 
     @Override
