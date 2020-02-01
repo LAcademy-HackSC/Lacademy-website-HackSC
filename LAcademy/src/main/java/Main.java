@@ -8,7 +8,6 @@ import com.google.cloud.firestore.FirestoreOptions;
 import com.google.cloud.firestore.WriteResult;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -16,12 +15,12 @@ import java.util.concurrent.ExecutionException;
 
 public class Main {
     public static void main(String[] args) throws IOException, ExecutionException, InterruptedException {
-        String path = "C:\\Users\\Alex\\Desktop\\LAcademy-11261bcdb733.json";
+        String path = "C:\\Users\\Alex\\Documents\\Lacademy-website-HackSC-\\LAcademy-11261bcdb733.json";
         Instance serviceAccount;
         ObjectMapper mapper = new ObjectMapper().configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-        serviceAccount = mapper.readValue(new File("C:\\Users\\Alex\\Desktop\\lacademy-e1e8a-firebase-adminsdk-ybrvw-1f4a96ef88.json"), Instance.class);
+        serviceAccount = mapper.readValue(new File(path), Instance.class);
 
-        QuickStart.authExplicit("C:\\Users\\Alex\\Desktop\\lacademy-e1e8a-firebase-adminsdk-ybrvw-1f4a96ef88.json");
+        QuickStart.authExplicit("C:\\Users\\Alex\\Documents\\Lacademy-website-HackSC-\\lacademy-e1e8a-firebase-adminsdk-ybrvw-1f4a96ef88.json");
         QuickStart qs = new QuickStart(serviceAccount.getProject_id());
 
 
