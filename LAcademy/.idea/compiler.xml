@@ -9,8 +9,8 @@
         <module name="LAcademy" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="LAcademy" target="1.5" />
+    <bytecodeTargetLevel target="11">
+      <module name="LAcademy" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
