@@ -1,5 +1,16 @@
-#searchbar {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+#search {
+	width: 50px;
 }
+
+#searchbar {
+	margin: auto auto;
+	width: 75%;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+
