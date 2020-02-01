@@ -1,9 +1,5 @@
-h1 {
-	color: blue;
-}
-
-img {
-	max-width: 100%;
-	display: block;
-	margin: auto;
+#searchbar {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
