@@ -17,7 +17,7 @@ public class QuickStart {
     public static Firestore db;
 
     public QuickStart(String projectId) throws IOException {
-        FileInputStream input = new FileInputStream("C:\\Users\\Alex\\Documents\\Lacademy-website-HackSC-\\lacademy-e1e8a-firebase-adminsdk-ybrvw-1f4a96ef88.json");
+        FileInputStream input = new FileInputStream("C:\\Users\\tonyl\\OneDrive\\Desktop\\Lacademyweb\\lacademy-e1e8a-firebase-adminsdk-ybrvw-1f4a96ef88.json");
 
         FirebaseOptions options = new FirebaseOptions.Builder()
                 .setCredentials(GoogleCredentials.fromStream(input))

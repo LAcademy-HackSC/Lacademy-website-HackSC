@@ -1,4 +1,10 @@
+import com.google.api.core.ApiFuture;
+import com.google.cloud.firestore.DocumentSnapshot;
+import com.google.cloud.firestore.QueryDocumentSnapshot;
+import com.google.cloud.firestore.QuerySnapshot;
+
 import java.util.*;
+import java.util.concurrent.ExecutionException;
 
 public class Student {
     private String name;
@@ -10,6 +16,17 @@ public class Student {
     private History history;
     private String[] reports;
     private String[] logs;
+
+    public ArrayList<HistoryTutor> getHistory(String studentid) throws ExecutionException, InterruptedException {
+        ArrayList<HistoryTutor> returnList = new ArrayList<HistoryTutor>();
+        ApiFuture<QuerySnapshot> future = QuickStart.db.collection("Student").document(studentid).collection("History").get();
+        List<QueryDocumentSnapshot> documents = future.get().getDocuments();
+        for (DocumentSnapshot document : documents) {
+            HistoryTutor temp = new HistoryTutor(document.getData(), document.getId());
+            returnList.add(temp);
+        }
+        return returnList;
+    }
 
     public String getName() {
         return name;
@@ -59,9 +76,6 @@ public class Student {
         this.gender = gender;
     }
 
-    public History getHistory() {
-        return history;
-    }
 
     public void setHistory(History history) {
         this.history = history;

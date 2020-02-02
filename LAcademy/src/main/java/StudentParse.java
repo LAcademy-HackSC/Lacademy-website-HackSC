@@ -1,3 +1,3 @@
 public class StudentParse {
-    priv
+    private int po;
 }
