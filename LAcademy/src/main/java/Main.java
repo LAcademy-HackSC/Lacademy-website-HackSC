@@ -21,6 +21,8 @@ public class Main {
         QuickStart.authExplicit();
         QuickStart qs = new QuickStart(serviceAccount.getProject_id());
 
+        SearchReturn search = new SearchReturn(new Search("math", "pomona"));
+        search.search();
 
     Student test = new Student();
     ArrayList<HistoryTutor> testArr = test.getHistory("Student 2");
