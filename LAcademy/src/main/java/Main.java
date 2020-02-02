@@ -21,47 +21,10 @@ public class Main {
         QuickStart.authExplicit();
         QuickStart qs = new QuickStart(serviceAccount.getProject_id());
 
+        Login log = new Login();
+        log.parseLoginJson("C:\\Users\\Alex\\Documents\\Lacademy-website-HackSC-\\test.json");
+        //System.out.println(log.checkLogin());
 
-        // Stuff to test adding stuff to database.
-        CollectionReference cities = qs.getDb().collection("cities");
-        List<ApiFuture<WriteResult>> futures = new ArrayList<>();
 
-//        futures.add(cities.document("DC").set(new City("Washington D.C.", null, "USA", true, 680000L,
-//                Arrays.asList("east_coast"))));
-//        futures.add(cities.document("SF").set(new City("San Francisco", "CA", "USA", false, 860000L,
-//                Arrays.asList("west_coast", "norcal"))));
-//        futures.add(cities.document("LA").set(new City("Los Angeles", "CA", "USA", false, 3900000L,
-//                Arrays.asList("west_coast", "socal"))));
-//
-//        futures.add(cities.document("TOK").set(new City("Tokyo", null, "Japan", true, 9000000L,
-//                Arrays.asList("kanto", "honshu"))));
-//        futures.add(cities.document("BJ").set(new City("Beijing", null, "China", true, 21500000L,
-//                Arrays.asList("jingjinji", "hebei"))));
-
-//        Map<String, String> doc = new HashMap<String, String>();
-//        doc.put("name", "Los Angeles");
-//        doc.put("state", "CA");
-//        doc.put("country", "USA");
-//        ApiFuture<WriteResult> future = qs.getDb().collection("cities").document("LA").set(doc);
-//        System.out.println("Update time: " + future.get().getUpdateTime());
-//        System.out.println();
-
-//
-//        FirestoreOptions firestoreOptions = FirestoreOptions.getDefaultInstance().toBuilder()
-//                        .setCredentials(GoogleCredentials.fromStream(serviceAccount))
-//                        .build();
-//
-//        Firestore db = firestoreOptions.getService();
-        DocumentReference docRef = qs.getDb().collection("cities").document("SF");
-// asynchronously retrieve the document
-        ApiFuture<DocumentSnapshot> future = docRef.get();
-// ...
-// future.get() blocks on response
-        DocumentSnapshot document = future.get();
-        if (document.exists()) {
-            System.out.println("Document data: " + document.getData());
-        } else {
-            System.out.println("No such document!");
-        }
     }
 }

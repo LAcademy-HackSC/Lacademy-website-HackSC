@@ -14,7 +14,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class QuickStart {
-    private Firestore db;
+    public static Firestore db;
 
     public QuickStart(String projectId) throws IOException {
         FileInputStream input = new FileInputStream("C:\\Users\\Alex\\Documents\\Lacademy-website-HackSC-\\lacademy-e1e8a-firebase-adminsdk-ybrvw-1f4a96ef88.json");
