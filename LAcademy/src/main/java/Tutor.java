@@ -1,15 +1,13 @@
-import java.util.*;
-
-public class Student {
+public class Tutor {
     private String name;
     private String id;
     private String age;
     private String grade;
     private String school;
     private String gender;
-    private History history;
-    private String[] reports;
-    private String[] logs;
+    private String phoneNumber;
+    private String availability;
+
 
     public String getName() {
         return name;
@@ -59,27 +57,19 @@ public class Student {
         this.gender = gender;
     }
 
-    public History getHistory() {
-        return history;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setHistory(History history) {
-        this.history = history;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
-    public String[] getReports() {
-        return reports;
+    public String getAvailability() {
+        return availability;
     }
 
-    public void setReports(String[] reports) {
-        this.reports = reports;
-    }
-
-    public String[] getLogs() {
-        return logs;
-    }
-
-    public void setLogs(String[] logs) {
-        this.logs = logs;
+    public void setAvailability(String availability) {
+        this.availability = availability;
     }
 }

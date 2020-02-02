@@ -20,10 +20,9 @@ public class Main {
 
         QuickStart.authExplicit();
         QuickStart qs = new QuickStart(serviceAccount.getProject_id());
-
-        Login log = new Login();
-        log.parseLoginJson("C:\\Users\\Alex\\Documents\\Lacademy-website-HackSC-\\test.json");
-        //System.out.println(log.checkLogin());
+        
+        //Login log = new Login();
+        //log.parseLoginJson("C:\\Users\\Alex\\Documents\\Lacademy-website-HackSC-\\test.json");
 
 
     }
