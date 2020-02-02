@@ -11,6 +11,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 :root {
+  --pastelgreen: #a3f5c0;
   --blue: #4e73df;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -159,7 +160,7 @@ sup {
 }
 
 a {
-  color: #4e73df;
+  color: #000000;
   text-decoration: none;
   background-color: transparent;
 }
@@ -2255,14 +2256,14 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #4e73df;
-  border-color: #4e73df;
+  background-color: #30b18a;
+  border-color: #30b18a;
 }
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #2e59d9;
-  border-color: #2653d4;
+  background-color: #30888a;
+  border-color: #30888a;
 }
 
 .btn-primary:focus, .btn-primary.focus {
@@ -9667,8 +9668,8 @@ a:focus {
 }
 
 .bg-gradient-primary {
-  background-color: #4e73df;
-  background-image: linear-gradient(180deg, #4e73df 10%, #224abe 100%);
+  background-color: #a3f5c0;
+  /*background-image: linear-gradient(180deg, #4e73df 10%, #224abe 100%);*/
   background-size: cover;
 }
 
