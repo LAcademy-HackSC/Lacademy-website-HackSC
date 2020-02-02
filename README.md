@@ -1,1 +1,1 @@
-# Lacademy-website-HackSC-
+# Lacademy-Website-HackSC2020
